@@ -5,12 +5,43 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <header class="site-header">
+      <div class="wrapper site-header__wrapper">
+        <%= image_tag 'logo_icon.png', alt: 'Brand Icon', class: 'brand-icon' %>
+        <nav class="nav">
+          <ul class="header-nav">
+            <li class="nav__item"><a href="#">一覧</a></li>
+            <li class="nav__item"><a href="#">詳細</a></li>
+            <li class="nav__item"><a href="#">戻る</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="content-area">
+      <%= yield %>
+    </main>
+
+
+    <footer class="site-footer">
+      <div class="wrapper site-footer__wrapper">
+        <p class="footer-text">© 2024 TwitterClone. All rights reserved.</p>
+          <nav class="footer-nav">
+            <ul>
+              <li><a href="#">利用規約</a></li>
+              <li><a href="#">プライバシーポリシー</a></li>
+              <li><a href="#">お問い合わせ</a></li>
+            <ul>
+          </nav>
+        </div>
+    </footer>
   </body>
+
 </html>
