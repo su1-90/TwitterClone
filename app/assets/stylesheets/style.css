@@ -1,6 +1,7 @@
 body {
-  width: 650px;
-  margin: 0 auto 0;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 760px;
 }
 
 .content-area {
@@ -17,6 +18,8 @@ body {
   position: relative;
   background-color: #def7ff;
   margin: 10px 0;
+  width: 90%;
+  box-sizing: border-box;
 }
 
 .site-header__wrapper {
@@ -61,6 +64,8 @@ h1 {
   margin-top: 35px;
   text-align: center;
   font-size: 0.8em;
+  width: 90%;
+  box-sizing: border-box;
 }
 
 .site-footer__wrapper {
@@ -92,4 +97,10 @@ h1 {
 
 .td__right {
   padding-right: 115px;
+}
+
+.error-message {
+  color: #ff0000;
+  font-size: 0.9rem;
+  margin-left: 10px;
 }

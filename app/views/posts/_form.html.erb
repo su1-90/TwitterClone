@@ -1,19 +1,16 @@
 <%= form_with(model: post) do |form| %>
   <% if post.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
-      <ul>
-        <% post.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+      <h2>問題が発生しました　　｡゜:(つд⊂):゜。ｳえーﾝ；；</h2>
     </div>
   <% end %>
 
   <div class="field">
     <%= form.label :content %>
     <%= form.text_area :content %>
+    <% if post.errors[:content].any? %>
+      <span class="error-message"><%= post.errors[:content].join(",") %></span>
+    <% end %>
   </div>
 
   <div class="actions">
